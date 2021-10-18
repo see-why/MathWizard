@@ -1,10 +1,8 @@
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// eslint-disable-next-line no-unused-vars
-import App from './App.js';
-import reportWebVitals from './reportWebVitals.js';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
