@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+tbody,
+tr {
+  display: flex;
+}
+
+tbody {
+  flex-direction: column;
+}
+
+.table {
+  height: 100vh;
+}
+
+.table,
+.tr,
+tbody {
+  width: 100%;
+}
+
+.tr {
+  line-height: 5em;
+}
+
+.tr:first-child {
+  background: #7c7777;
+  font-size: 25px;
+}
+
+.tr td {
+  width: 25%;
+  text-align: center;
+}
+
+.tr td:not(:last-child) {
+  background: #a9a9a9;
+}
+
+.tr:first-child td {
+  text-align: end;
+  width: 98%;
+  color: #fff;
+}
+
+.tr:not(:first-child) td {
+  border: 1px solid grey;
+}
+
+.tr:not(:first-child) td:last-child {
+  background: #ff4500;
+}
+
+.tr:last-child td:not(:first-child) {
+  width: 24.9%;
+}
+
+.tr:last-child td:first-child {
+  width: 50.3%;
+}
