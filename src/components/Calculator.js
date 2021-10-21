@@ -1,49 +1,39 @@
 import '../Calculator.css';
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import calculate from '../logic/calculate';
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { total: 0, next: null, operation: null };
-    this.handleClick = this.handleClick.bind(this);
-  }
+const Calculator = () => {
+  const [state, setstate] = useState({ total: 0, next: null, operation: null });
 
-  componentDidMount() {
-    this.handleClick('');
-  }
+  const handleClick = (data) => {
+    setstate(calculate(state, data));
+  };
 
-  handleClick(data) {
-    this.setState((state) => calculate(state, data));
-  }
+  const tableButtons = [
+    [0],
+    ['AC', '+/-', '%', String.fromCodePoint(247)],
+    ['7', '8', '9', 'x'],
+    ['4', '5', '6', '-'],
+    ['1', '2', '3', '+'],
+    ['0', '.', '='],
+  ];
 
-  render() {
-    const tableButtons = [
-      [0],
-      ['AC', '+/-', '%', String.fromCodePoint(247)],
-      ['7', '8', '9', 'x'],
-      ['4', '5', '6', '-'],
-      ['1', '2', '3', '+'],
-      ['0', '.', '='],
-    ];
+  const { total, next, operation } = state;
+  const previousState = {
+    total,
+    next,
+    operation,
+  };
 
-    const { total, next, operation } = this.state;
-    const previousState = {
-      total,
-      next,
-      operation,
-    };
-
-    return (
-      <Table
-        tableButtons={tableButtons}
-        previousState={previousState}
-        handleClick={this.handleClick}
-      />
-    );
-  }
-}
+  return (
+    <Table
+      tableButtons={tableButtons}
+      previousState={previousState}
+      handleClick={handleClick}
+    />
+  );
+};
 
 const Table = ({ tableButtons, previousState, handleClick }) => (
   <table className="table">
