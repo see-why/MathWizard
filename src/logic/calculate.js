@@ -41,7 +41,7 @@ export default function calculate(obj, buttonName) {
       };
     }
     return {
-      next: buttonName,
+      next: obj.total === '0.' ? obj.total + buttonName : buttonName,
       total: null,
     };
   }
@@ -58,7 +58,7 @@ export default function calculate(obj, buttonName) {
     }
     if (obj.total) {
       if (obj.total.includes('.')) {
-        return {};
+        return { total: `${obj.total}` };
       }
       return { total: `${obj.total}.` };
     }
@@ -74,7 +74,10 @@ export default function calculate(obj, buttonName) {
       };
     }
     // '=' with no operation, nothing to do
-    return {};
+    return {
+      next: obj.total === 0 ? null : obj.total,
+      total: obj.next === 0 ? 0 : obj.next,
+    };
   }
 
   if (buttonName === '+/-') {
@@ -84,7 +87,7 @@ export default function calculate(obj, buttonName) {
     if (obj.total) {
       return { ...obj, total: (-1 * parseFloat(obj.total)).toString() };
     }
-    return {};
+    return { total: 0 };
   }
 
   // Button must be an operation
