@@ -4,6 +4,7 @@ body {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
+.Footer,
 .flex,
 .menuNav,
 .navBar,
@@ -113,4 +114,14 @@ tbody {
 .Quote-h2 {
   padding: 2%;
   margin-top: 80px;
+}
+
+.Footer {
+  width: 99%;
+  padding: 0.5%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #808080;
+  justify-content: flex-end;
 }
