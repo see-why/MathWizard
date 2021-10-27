@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Quote from './pages/Quote';
 import Navbar from './components/NavBar';
 import NotMatch from './pages/NoMatch';
+import Footer from './components/Footer';
 
 class App extends React.Component {
   render() {
@@ -28,6 +29,7 @@ class App extends React.Component {
             <NotMatch />
           </Route>
         </Switch>
+        <Footer />
       </>
     );
   }
