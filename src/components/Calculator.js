@@ -101,7 +101,10 @@ const TableEntry = ({ text, previousState, handleClick }) => {
   return value;
 };
 
-TableEntry.propTypes = { text: PropTypes.string.isRequired };
+TableEntry.propTypes = {
+  text: PropTypes.oneOfType([PropTypes.number,
+    PropTypes.string]).isRequired,
+};
 TableEntry.defaultProps = { text: '0' };
 
 export default Calculator;
