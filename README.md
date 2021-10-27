@@ -2,6 +2,8 @@
 # MathWizard
 This is a web application for all fans of mathematics. It is a Single Page App (SPA) that allows users to:  Make simple calculations. Read a random math-related quote.
 
+![screenshot](/landingPage.PNG)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Additional description about the project and its features.
