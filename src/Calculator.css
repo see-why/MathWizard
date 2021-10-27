@@ -4,9 +4,52 @@ body {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
+.Footer,
+.flex,
+.menuNav,
+.navBar,
 tbody,
 tr {
   display: flex;
+}
+
+.navBar {
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 1% 0;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.menuNav {
+  list-style: none;
+  align-self: center;
+}
+
+.menuNav li:not(:last-child) {
+  border-right: 1px solid #000;
+  padding-right: 10px;
+}
+
+.menuNav li:not(:first-child) {
+  padding-left: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.active-link {
+  color: #f00;
+}
+
+.flex h2 {
+  width: 40%;
 }
 
 tbody {
@@ -23,17 +66,17 @@ td:active {
 }
 
 .table {
-  height: 100vh;
+  height: 60vh;
+  width: 60%;
 }
 
-.table,
 .tr,
 tbody {
   width: 100%;
 }
 
 .tr {
-  line-height: 5em;
+  line-height: 4em;
 }
 
 .tr:first-child {
@@ -57,7 +100,7 @@ tbody {
 }
 
 .tr:not(:first-child) td {
-  border: 1px solid grey;
+  border: 1px solid #808080;
 }
 
 .tr:not(:first-child) td:last-child {
@@ -70,4 +113,19 @@ tbody {
 
 .tr:last-child td:first-child {
   width: 50.3%;
+}
+
+.Quote-h2 {
+  padding: 2%;
+  margin-top: 80px;
+}
+
+.Footer {
+  width: 99%;
+  padding: 0.5%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #808080;
+  justify-content: flex-end;
 }
