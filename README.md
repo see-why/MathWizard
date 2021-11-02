@@ -15,6 +15,7 @@ Additional description about the project and its features.
 ## Live Demo
 
 [Live Demo Link]( https://see-why.github.io/MathWizard/)
+[Live Demo Link- Heroku]( https://mathwizard.herokuapp.com/)
 
 
 ## Getting Started
